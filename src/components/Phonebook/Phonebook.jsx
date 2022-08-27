@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid/non-secure';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/store';
+import { addContact } from 'redux/contactsSlice';
 
 import InputName from './Input/InputName/InputName';
 import LabelPhoneBook from './Label/Label';
