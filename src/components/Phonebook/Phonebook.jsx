@@ -13,7 +13,7 @@ const Phonebook = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
 
   const handleChange = e => {
     switch (e.currentTarget.name) {
