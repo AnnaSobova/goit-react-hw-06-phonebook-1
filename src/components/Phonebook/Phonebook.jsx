@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid/non-secure';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/store';
+import { addContact } from 'redux/contactsSlice';
 
 import InputName from './Input/InputName/InputName';
 import LabelPhoneBook from './Label/Label';
@@ -13,7 +13,7 @@ const Phonebook = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
 
   const handleChange = e => {
     switch (e.currentTarget.name) {

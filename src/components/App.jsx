@@ -4,7 +4,7 @@ import Contacts from './Phonebook/Contacts/Contacts';
 import { useSelector } from 'react-redux';
 
 const App = () => {
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
 
   return (
     <Main title="Phonebook">

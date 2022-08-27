@@ -5,12 +5,12 @@ import LabelFilter from '../Label/LabelFilter/LabelFilter';
 import ButtonDelete from '../Button/ButtonDelete/ButtonDelete';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeContact } from 'redux/store';
+import { removeContact } from 'redux/contactsSlice';
 
 const Contacts = ({ name }) => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
-  const filter = useSelector(state => state.filter);
+  const contacts = useSelector(state => state.contacts.items);
+  const filter = useSelector(state => state.contacts.filter);
   const normolizeFilter = filter.toLowerCase();
   const visibleContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(normolizeFilter)
